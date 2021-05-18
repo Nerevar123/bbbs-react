@@ -1,15 +1,16 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.scss";
+import Header from "../Header/Header";
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.page}>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className={styles.page__section}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -17,6 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Header />
     </div>
   );
 }

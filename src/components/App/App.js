@@ -1,25 +1,25 @@
-import React from "react";
+import { Router, Route, Switch, useHistory } from "react-router-dom";
 import styles from "./App.module.scss";
 import Header from "../Header/Header";
+import Calendar from "../Calendar/Calendar";
 
 function App() {
+  const history = useHistory();
   return (
-    <div className={styles.page}>
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className={styles.page__section}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router history={history} basename="/">
       <Header />
-    </div>
+      <main className={styles.main}>
+        <Switch>
+          <Route exact path="/">
+            <h1>Home</h1>
+          </Route>
+          <Route exact path="/calendar">
+            <Calendar />
+          </Route>
+        </Switch>
+      </main>
+      <footer>Footer</footer>
+    </Router>
   );
 }
 

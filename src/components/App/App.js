@@ -2,12 +2,15 @@ import { Router, Route, Switch, useHistory } from "react-router-dom";
 import styles from "./App.module.scss";
 import Header from "../Header/Header";
 import Calendar from "../Calendar/Calendar";
+import Menu from "../Menu/Menu";
 
 function App() {
   const history = useHistory();
   return (
     <Router history={history} basename="/">
-      <Header />
+      <Header>
+        <Menu />
+      </Header>
       <main className={styles.main}>
         <Switch>
           <Route exact path="/">

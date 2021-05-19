@@ -24,7 +24,7 @@ function Calendar() {
             </li>
             <li className="calendar__info-item">
               <p className="calendar__place">
-                Садовническая наб., д. 77 стр. 1 (офис компании Ernst&Young)
+                Садовническая наб., д. 77 стр. 1 (офис компании Ernst&amp;Young)
               </p>
             </li>
             <li className="calendar__info-item">

@@ -1,11 +1,14 @@
+import React from "react";
+import PropTypes from "prop-types";
 import headerStyles from "./Header.module.scss";
 
-function Header() {
-  return (
-    <header className={headerStyles.header}>
-      <p className={headerStyles.test}>Header</p>
-    </header>
-  );
+// eslint-disable-next-line react/prop-types
+function Header({ children }) {
+  return <header className={headerStyles.header}>{children}</header>;
 }
+
+Header.PropTypes = {
+  children: PropTypes.any,
+};
 
 export default Header;

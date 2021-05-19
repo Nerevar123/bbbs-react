@@ -8,6 +8,19 @@
 .main {
   padding-bottom: 120px;
 }
+.paragraph {
+  margin: 0;
+  font-family: $ptRootUI;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: $black;
+}
+
+.paragraph_type_test {
+  padding-top: 50px;
+  max-width: 472px;
+}
 
 @include atDesktop1440 {
   .page__section {
@@ -22,6 +35,9 @@
   }
   .main {
     padding-bottom: 100px;
+  }
+  .paragraph {
+    font-size: 15px;
   }
 }
 
@@ -42,7 +58,7 @@
 }
 
 
-.section-title {
+.sectionTitle {
   margin: 0;
   font-family: $protoGrotesk;
   font-weight: 300;
@@ -61,12 +77,12 @@
   }
 }
 
-.section-title_type_test {
+.sectionTitle_type_test {
   margin-top: 40px;
 }
 
 @include atDesktop1024 {
-  .section-title {
+  .sectionTitle {
     font-size: 19px;
     line-height: 1.2;
   }

@@ -1,11 +1,12 @@
-import cx from "classnames";
+import cn from "classnames";
 import PropTypes from "prop-types";
+import Button from "../Button/Button";
 import calendarItemStyles from "./CalendarItem.module.scss";
 
 function CalendarItem({ isActive }) {
   return (
     <article
-      className={cx(calendarItemStyles.calendar, {
+      className={cn(calendarItemStyles.calendar, {
         [calendarItemStyles.calendar_selected]: isActive,
       })}
     >
@@ -38,19 +39,26 @@ function CalendarItem({ isActive }) {
           </li>
         </ul>
         <div className={calendarItemStyles.submit}>
-          <button
-            className="button button_theme_light calendar__button calendar__button_selected calendar__button_action_sign-up"
+          <Button
+            className={
+              (calendarItemStyles.button,
+              isActive && calendarItemStyles.button_selected)
+            }
+            isLight
             type="button"
+            onClick={() => console.log("123")}
           >
             Отменить запись
-          </button>
+          </Button>
           <p className={calendarItemStyles.placeLeft}></p>
-          <button
-            className="button calendar__button-dots button_theme_light"
+          <Button
+            className={calendarItemStyles.buttonDots}
+            isLight
             type="button"
+            onClick={() => console.log("123")}
           >
             &#8226;&#8226;&#8226;
-          </button>
+          </Button>
         </div>
       </div>
     </article>

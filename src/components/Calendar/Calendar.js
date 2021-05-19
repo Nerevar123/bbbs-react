@@ -1,5 +1,5 @@
-import calendarStyles from "./Calendar.module.scss";
 import CalendarItem from "../CalendarItem/CalendarItem";
+import calendarStyles from "./Calendar.module.scss";
 
 function Calendar() {
   return (

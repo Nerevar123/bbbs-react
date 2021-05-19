@@ -6,18 +6,22 @@ module.exports = {
   extends: [
     "airbnb-base",
     "prettier",
+    "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:css-modules/recommended",
   ],
-  parser: "babel-eslint",
   parserOptions: {
-    ecmaVersion: 12,
-    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
-    plugins: ["react", "prettier", "css-modules"],
-    rules: {
-      "prettier/prettier": "error",
-    },
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: ["react", "prettier", "css-modules"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "css-modules/no-unused-class": "off",
   },
 };

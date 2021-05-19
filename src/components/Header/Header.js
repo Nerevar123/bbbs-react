@@ -1,4 +1,3 @@
-import React from "react";
 import headerStyles from "./Header.module.scss";
 
 function Header() {

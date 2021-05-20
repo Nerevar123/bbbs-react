@@ -1,6 +1,6 @@
-@import '../../sass/styles.scss';
+@import "../../sass/styles.scss";
 
-.page__section {
+.section {
   margin: 0 auto;
   padding: 80px 75px 0;
 }
@@ -8,6 +8,7 @@
 .main {
   padding-bottom: 120px;
 }
+
 .paragraph {
   margin: 0;
   font-family: $ptRootUI;
@@ -58,6 +59,7 @@
 }
 
 
+
 .sectionTitle {
   margin: 0;
   font-family: $protoGrotesk;
@@ -69,7 +71,7 @@
   &_clickable {
     display: inline-block;
     text-decoration: none;
-    transition: .2s linear;
+    transition: 0.2s linear;
 
     &:hover {
       color: $blue;
@@ -85,5 +87,28 @@
   .sectionTitle {
     font-size: 19px;
     line-height: 1.2;
+  }
+}
+
+
+
+.mainTitle {
+  margin: 0;
+  font-family: $protoGrotesk;
+  font-weight: 300;
+  font-size: 74px;
+  line-height: 108%;
+  color: $black;
+  text-align: center;
+}
+
+.mainTitle_type_test {
+  margin-top: 40px;
+}
+
+@include atDesktop1024 {
+  .mainTitle {
+    font-size: 37px;
+    line-height: 105%;
   }
 }

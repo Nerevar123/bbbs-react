@@ -214,7 +214,7 @@
   }
 
   .title {
-    composes: section-title from '../App/App.module.scss';
+    composes: sectionTitle from '../App/App.module.scss';
     max-width: 246px;
   }
 

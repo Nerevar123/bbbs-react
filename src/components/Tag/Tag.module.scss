@@ -1,0 +1,24 @@
+@import '../../sass/styles.scss';
+
+.listItem {
+  margin-top: 15px;
+}
+
+.button {
+  &_active {
+    background-color: $black;
+    color: $background;
+
+    &:hover {
+      background-color: $darkBlue;
+      color: $background;
+      border-color: $darkBlue;
+    }
+  }
+}
+
+@include atDesktop1024 {
+  .list-item {
+    margin-top: 10px;
+  }
+}

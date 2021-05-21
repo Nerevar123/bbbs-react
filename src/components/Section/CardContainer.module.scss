@@ -1,44 +1,39 @@
 @import '../../sass/styles';
 
-.container_type_identical {
-  grid-template-rows: 382px;
-}
-
 .container {
-  composes: pageSection from '../App/App.module.scss';
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 222px;
   justify-content: center;
 
-  &_type_main-article {
+  &TypeMainArticle {
     grid-template-columns: 66% 34%;
     grid-template-rows: 630px;
   }
 
-  &_type_main-video {
+  &TypeMainVideo {
     grid-template-columns: 32% 68%;
     grid-template-rows: 1fr;
   }
 
-  &_type_article {
+  &TypeArticle {
     grid-template-rows: 224px 222px;
   }
 
-  &_type_identical {
+  &TypeIdentical {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 520px;
     gap: 30px;
   }
 
-  &_type_iframe {
+  &TypeIframe {
     grid-template-columns: 420px 1fr;
     grid-template-rows: 627px;
     gap: 30px;
   }
 
-  &_type_personal-area {
+  &TypePersonalArea {
     max-width: 1170px;
     padding-top: 80px;
     grid-template-columns: 40% 60%;

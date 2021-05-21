@@ -1,0 +1,9 @@
+@import '../../../sass/styles.scss';
+
+.cardParagraph {
+  margin-top: 30px;
+
+  &:first-of-type {
+    margin: 0;
+  }
+}

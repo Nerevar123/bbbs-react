@@ -1,27 +1,27 @@
 import React from "react";
 import cn from "classnames";
-import CardPreviewAboutStyles from "./CardPreviewAbout.module.scss";
+import CardAboutStyles from "./CardAbout.module.scss";
 import CardStyles from "../Card.module.scss";
 import SectionTitleStyles from "../../App/App.module.scss";
 import logo from "../../../images/svg/calendar_logo.svg";
 
-function CardPreviewAbout() {
+function CardAbout() {
   return (
-    <article className={cn(CardStyles.card, CardPreviewAboutStyles.cardAbout)}>
-      <div className={CardPreviewAboutStyles.cardAboutUpperElement}>
+    <article className={cn(CardStyles.card, CardAboutStyles.cardAbout, CardStyles.cardColorGreen)}>
+      <div className={CardAboutStyles.cardAboutUpperElement}>
         <a>
           <img
             src={logo}
             alt="Логотип Старшие Братья Старшие Сестры России"
-            className={CardPreviewAboutStyles.cardAboutLogo}
+            className={CardAboutStyles.cardAboutLogo}
           />
         </a>
       </div>
-      <div className={CardPreviewAboutStyles.cardAboutContent}>
+      <div className={CardAboutStyles.cardAboutContent}>
         <h2
           className={cn(
             SectionTitleStyles.sectionTitle,
-            CardPreviewAboutStyles.cardAboutText
+            CardAboutStyles.cardAboutText
           )}
         >
           Наставники.про – цифоровая информационная платформа огрганизации
@@ -33,4 +33,4 @@ function CardPreviewAbout() {
   );
 }
 
-export default CardPreviewAbout;
+export default CardAbout;

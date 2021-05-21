@@ -1,14 +1,15 @@
 import React from "react";
 import cn from "classnames";
-import CardPreviewCases from "../../Card/CardPreviewCases/CardPreviewCases";
-import CardPreviewAbout from "../../Card/CardPreviewAbout/CardPreviewAbout";
+import CardFriendship from "../../Card/CardFriendship/CardFriendship";
+import CardAbout from "../../Card/CardAbout/CardAbout";
 import CardContainerStyles from "../CardContainer.module.scss";
+import SectionStyles from "../../App/App.module.scss";
 
 function LeadSection() {
   return (
-    <section className={cn(CardContainerStyles.container, CardContainerStyles.container_type_identical)}>
-      <CardPreviewAbout />
-      <CardPreviewCases />
+    <section className={cn(CardContainerStyles.container, CardContainerStyles.containerTypeIdentical, SectionStyles.pageSection)}>
+      <CardAbout />
+      <CardFriendship />
     </section>
   )
 }

@@ -23,5 +23,6 @@ module.exports = {
     "prettier/prettier": "warn",
     "no-unused-vars": "warn",
     "css-modules/no-unused-class": "off",
+    "css-modules/no-undef-class": "off"
   },
 };

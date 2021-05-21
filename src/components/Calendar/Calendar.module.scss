@@ -1,7 +1,7 @@
 @import '../../sass/styles.scss';
 
 .container {
-  composes: page__section from '../App/App.module.scss';
+  composes: pageSection from '../App/App.module.scss';
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));

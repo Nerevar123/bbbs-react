@@ -1,0 +1,75 @@
+@import '../../../sass/styles.scss';
+
+.cardAbout {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background-color: $green;
+}
+
+.cardAboutUpperElement {
+  width: 60%;
+  height: 30%;
+  padding-top: 40px;
+  padding-left: 30px;
+  border-bottom-right-radius: 200px;
+  background-color: $pink;
+}
+
+.cardAboutLogo {
+  width: 252px;
+}
+
+.cardAboutContent {
+  width: 100%;
+  height: 70%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 400px;
+  background-color: $pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardAboutText {
+  max-width: 570px;
+  text-align: center;
+}
+
+@include atDesktop1440 {
+  .cardAboutUpperElement {
+    width: 70%;
+    padding-top: 35px;
+  }
+
+  .cardAboutText {
+    max-width: 510px;
+  }
+}
+
+@include atDesktop1024 {
+  .cardAboutUpperElement {
+    min-height: 90px;
+    padding-top: 27px;
+    padding-left: 15px;
+  }
+
+  .cardAboutLogo {
+    width: 164px;
+  }
+
+  .cardAboutContent {
+    min-height: 292px;
+    padding: 35px 15px;
+    border-radius: 70px 70px 0 0;
+  }
+}
+
+@include atMobile {
+  .cardAboutUpperElement {
+    padding-top: 22px;
+  }
+}

@@ -1,6 +1,6 @@
 @import '../../sass/styles.scss';
 
-.page__section {
+.pageSection {
   margin: 0 auto;
   padding: 80px 75px 0;
 }
@@ -10,14 +10,14 @@
 }
 
 @include atDesktop1440 {
-  .page__section {
+  .pageSection {
     padding-left: 135px;
     padding-right: 135px;
   }
 }
 
 @include atDesktop1024 {
-  .page__section {
+  .pageSection {
     padding: 40px 127px 0;
   }
   .main {
@@ -26,14 +26,14 @@
 }
 
 @include atTablet {
-  .page__section {
+  .pageSection {
     padding-left: 60px;
     padding-right: 60px;
   }
 }
 
 @include atMobile {
-  .page__section {
+  .pageSection {
     padding: 20px 15px 0;
   }
   .main {
@@ -42,7 +42,7 @@
 }
 
 
-.section-title {
+.sectionTitle {
   margin: 0;
   font-family: $protoGrotesk;
   font-weight: 300;
@@ -66,7 +66,7 @@
 }
 
 @include atDesktop1024 {
-  .section-title {
+  .sectionTitle {
     font-size: 19px;
     line-height: 1.2;
   }

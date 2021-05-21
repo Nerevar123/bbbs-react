@@ -1,6 +1,7 @@
 @import '../../sass/styles.scss';
 
 .header {
+  composes: section from "../App/App.module.scss";
   padding-top: 40px;
   transition: .2s linear;
 }

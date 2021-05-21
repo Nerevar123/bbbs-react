@@ -182,7 +182,7 @@
   padding-left: 15px;
 }
 
-.button-dots {
+.buttonDots {
   margin-left: auto;
   padding: 0 15px;
   width: 48px;
@@ -214,7 +214,7 @@
   }
 
   .title {
-    composes: section-title from '../App/App.module.scss';
+    composes: sectionTitle from '../App/App.module.scss';
     max-width: 246px;
   }
 
@@ -229,7 +229,7 @@
     font-size: 19px;
   }
 
-  .button-dots {
+  .buttonDots {
     padding: 0 12px;
     width: 40px;
   }

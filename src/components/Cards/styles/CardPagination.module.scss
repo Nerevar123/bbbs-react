@@ -1,0 +1,70 @@
+@import '../../../sass/styles';
+
+// удаление лишних карточек при переполнении
+// заданного кол-ва строк
+
+@include atDesktop1639 {
+  .cardPagination {
+    &TypeShapes {
+      &:nth-last-of-type(-n+4) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include atDesktop1440 {
+  .cardPagination {
+    &:nth-last-of-type(-n+4) {
+      display: none;
+    }
+
+    &PageMain {
+      &:nth-last-of-type(-n+1) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include atDesktop1279 {
+  .cardPagination {
+
+    &PageMain {
+      &:nth-last-of-type(-n+2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include atDesktop1199 {
+  .cardPagination {
+    &TypeShapes {
+      &:nth-last-of-type(-n+12) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include atDesktop1217 {
+  .cardPagination {
+    &TypeShapes {
+      &:nth-last-of-type(-n+8) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include atTabletL {
+  .cardPagination {
+
+    &PageMain {
+      &:nth-last-of-type(-n+3) {
+        display: none;
+      }
+    }
+  }
+}

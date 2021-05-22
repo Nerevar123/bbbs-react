@@ -1,0 +1,57 @@
+@import '../../../sass/styles';
+
+.video {
+  position: relative;
+}
+
+.videoImg {
+  width: 100%;
+  height: 236px;
+  object-fit: cover;
+  cursor: pointer;
+  position: relative;
+
+  &PositionMainVideo {
+    height: auto;
+  }
+}
+
+.cardVideoImg {
+  width: 100%;
+}
+
+.videoRubricList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.videoRubric {
+  background-color: rgba(255, 255, 255, .6);
+}
+
+@include atDesktop1440 {
+  .videoImg {
+    height: 208px;
+
+    &PositionMainVideo {
+      height: auto;
+    }
+  }
+}
+
+@include atMobile {
+  .videoImg {
+    height: 163px;
+
+    &PositionMainVideo {
+      height: auto;
+    }
+  }
+}

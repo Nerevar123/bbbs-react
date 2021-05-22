@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
-import CardAboutStyles from "./CardAbout.module.scss";
-import CardStyles from "../Card.module.scss";
-import SectionTitleStyles from "../../App/App.module.scss";
-import logo from "../../../images/svg/calendar_logo.svg";
+import CardAboutStyles from "./styles/CardAbout.module.scss";
+import CardStyles from "./styles/Card.module.scss";
+import SectionTitleStyles from "../App/App.module.scss";
+import logo from "../../images/svg/calendar_logo.svg";
 
 function CardAbout() {
   return (
@@ -24,7 +24,7 @@ function CardAbout() {
             CardAboutStyles.cardAboutText
           )}
         >
-          Наставники.про – цифоровая информационная платформа огрганизации
+          Наставники.про – цифровая информационная платформа организации
           «Старшие Братья Старшие Сестры», созданная для поддержки наставников
           программы.
         </h2>

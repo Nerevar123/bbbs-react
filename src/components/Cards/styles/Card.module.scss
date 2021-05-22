@@ -1,4 +1,4 @@
-@import '../../sass/styles.scss';
+@import '../../../sass/styles';
 
 .card {
   position: relative;
@@ -24,7 +24,7 @@
     background-color: $pink;
   }
 
-  &_color_blue {
+  &ColorBlue {
     background-color: $lightBlue;
   }
 
@@ -34,24 +34,24 @@
     padding: 30px;
   }
 
-  &_content_book {
+  &ContentBook {
     padding: 30px;
   }
 
-  &_content_video {
+  &ContentVideo {
     padding: 0;
   }
 
-  &_content_friendship {
+  &ContentFriendship {
     padding: 0;
     justify-content: center;
   }
 
-  &_content_video-preview {
+  &ContentVideoPreview {
     padding: 30px;
   }
 
-  &_content_quote {
+  &ContentArticle {
     padding-top: 120px;
     padding-bottom: 30px;
     height: 490px;
@@ -93,6 +93,11 @@
 .cardLinkWrap {
   width: 100%;
   text-decoration: none;
+
+  &Events {
+    margin-top: 70px;
+    margin-bottom: 15px;
+  }
 }
 
 .cardTitleWrap {
@@ -150,6 +155,22 @@
   margin-top: auto;
 }
 
+.cardFriendshipLink {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba($black, .6);
+}
+
 .cardRubric {
   margin: 0;
   box-sizing: border-box;
@@ -163,9 +184,35 @@
   letter-spacing: 1px;
   color: $darkGray;
   text-transform: uppercase;
-  white-space: nowrap;
-  position: absolute;
-  top: 15px;
+
+  &Events {
+    white-space: nowrap;
+    position: absolute;
+    top: 15px;
+  }
+}
+
+.chapterTitle {
+  margin: 0;
+  font-family: $protoGrotesk;
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1.1;
+  color: $black;
+
+  &_clickable {
+    color: $blue;
+    text-decoration: none;
+    transition: .2s linear;
+
+    &:hover {
+      color: $darkBlue;
+    }
+  }
+}
+
+.chapter-title_type_test {
+  margin-top: 40px;
 }
 
 .cardQuote {
@@ -185,14 +232,15 @@
 }
 
 // фото на карточке c главной страницы
-.card__media-img {
+
+.cardFriendshipImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 // видео на карточке попапа
-.card__video-iframe {
+.cardVideoIframe {
   margin: 0;
   padding-bottom: 30px;
   width: 100%;
@@ -268,14 +316,22 @@
   max-width: 472px;
 }
 
+.cardParagraph {
+  margin-top: 30px;
+
+  &:first-of-type {
+    margin: 0;
+  }
+}
+
 @include atDesktop1440 {
-  .card__img {
+  .cardImg {
     &_position_main-article {
       margin-top: 10px;
     }
   }
 
-  .card__video-iframe {
+  .cardVideoIframe {
     max-width: 1100px;
     max-height: 625px;
   }
@@ -286,75 +342,75 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    &_type_main {
+    &TypeMain {
       padding-top: 37px;
       padding-bottom: 15px;
     }
 
-    &_content_annotation {
+    &ContentAnnotation {
       padding-right: 7px;
       padding-bottom: 30px;
     }
 
-    &_content_book {
+    &ContentBook {
       padding: 30px;
     }
 
-    &_content_video {
+    &ContentVideo {
       padding: 0;
     }
 
-    &_content_media {
+    &ContentMedia {
       padding: 0;
     }
 
-    &_content_video-preview {
+    &ContentVideoPreview {
       padding: 15px;
       grid-row: 2;
     }
 
-    &_content_quote {
+    &ContentArticle {
       padding-top: 30px;
       padding-bottom: 15px;
       height: 312px;
     }
   }
 
-  .card__video-info {
+  .cardVideoInfo {
     padding: 15px;
     height: 147px;
   }
 
-  .card__link-wrap {
+  .cardLinkWrap {
     &_content_article-img {
       margin-top: 60px;
     }
   }
 
-  .card__img {
+  .cardImg {
     height: 345px;
 
-    &_position_main-article {
+    &PositionMainArticle {
       margin-top: 40px;
     }
   }
 
-  .card__annotation-caption {
+  .cardAnnotationCaption {
     margin-bottom: 5px;
   }
 
-  .card__annotation {
+  .cardAnnotation {
 
-    &_position_main-card {
+    &PositionMainCard {
       margin-top: 0;
     }
   }
 
-  .card__paragraph {
+  .cardParagraph {
     margin-top: 10px;
   }
 
-  .card__quote {
+  .cardQuote {
     max-width: 690px;
     font-size: 19px;
     line-height: 1.2;
@@ -371,6 +427,11 @@
 
   .paragraph {
     font-size: 15px;
+  }
+
+  .chapterTitle {
+    font-size: 23px;
+    line-height: 1.3;
   }
 }
 
@@ -398,7 +459,7 @@
     }
   }
 
-  .card__img {
+  .cardImg {
     height: 142px;
 
     &_position_main-article {

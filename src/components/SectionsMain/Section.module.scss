@@ -45,6 +45,8 @@
   }
 }
 
+
+
 @include atDesktop1440 {
   .card-container {
 
@@ -132,5 +134,35 @@
     &_type_personal-area {
       grid-template-rows: 290px 1fr;
     }
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(290px, 1fr));
+  gap: 80px 30px;
+
+  &ContentSmallCards {
+    grid-template-columns: repeat(4, minmax(290px, 1fr));
+  }
+}
+
+@include atDesktop1440 {
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+}
+
+@include atDesktop1024 {
+  .cardsGrid {
+    padding-top: 50px;
+    row-gap: 30px;
+  }
+}
+
+@include atTablet {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
   }
 }

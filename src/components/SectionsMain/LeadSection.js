@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
-import CardFriendship from "../../Card/CardFriendship/CardFriendship";
-import CardAbout from "../../Card/CardAbout/CardAbout";
-import CardContainerStyles from "../CardContainer.module.scss";
-import SectionStyles from "../../App/App.module.scss";
+import CardFriendship from "../Cards/CardFriendship";
+import CardAbout from "../Cards/CardAbout";
+import CardContainerStyles from "./Section.module.scss";
+import SectionStyles from "../App/App.module.scss";
 
 function LeadSection() {
   return (

@@ -1,44 +1,39 @@
 @import '../../sass/styles';
 
-.container_type_identical {
-  grid-template-rows: 382px;
-}
-
 .container {
-  composes: pageSection from '../App/App.module.scss';
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 222px;
   justify-content: center;
 
-  &_type_main-article {
+  &TypeMainArticle {
     grid-template-columns: 66% 34%;
     grid-template-rows: 630px;
   }
 
-  &_type_main-video {
+  &TypeMainVideo {
     grid-template-columns: 32% 68%;
     grid-template-rows: 1fr;
   }
 
-  &_type_article {
+  &TypeArticle {
     grid-template-rows: 224px 222px;
   }
 
-  &_type_identical {
+  &TypeIdentical {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 520px;
     gap: 30px;
   }
 
-  &_type_iframe {
+  &TypeIframe {
     grid-template-columns: 420px 1fr;
     grid-template-rows: 627px;
     gap: 30px;
   }
 
-  &_type_personal-area {
+  &TypePersonalArea {
     max-width: 1170px;
     padding-top: 80px;
     grid-template-columns: 40% 60%;
@@ -50,25 +45,27 @@
   }
 }
 
-@include atDesktop1440 {
-  .card-container {
 
-    &_type_main-article {
+
+@include atDesktop1440 {
+  .container {
+
+    &TypeMainArticle {
       grid-template-columns: 1fr 1fr;
     }
 
-    &_type_identical {
+    &TypeIdentical {
       grid-template-rows: 414px;
     }
 
-    &_type_iframe {
+    &TypeIframe {
       grid-template-columns: 370px 1fr;
     }
   }
 }
 
 @include atDesktop1380 {
-  .card-container_type_personal-area {
+  .containerTypePersonalArea {
     grid-template-columns: 1fr;
     grid-template-rows: 450px 1fr;
     padding-top: 30px;
@@ -81,27 +78,27 @@
 }
 
 @include atDesktop1024 {
-  .card-container {
+  .container {
 
-    &_type_main-article {
+    &TypeMainArticle {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 188px;
     }
 
-    &_type_main-video {
+    &TypeMainVideo {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 147px;
     }
 
-    &_type_article {
+    &TypeArticle {
       grid-template-rows: 176px 188px;
     }
 
-    &_type_identical {
+    &TypeIdentical {
       grid-template-rows: 382px;
     }
 
-    &_type_iframe {
+    &TypeIframe {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 552px;
     }
@@ -109,13 +106,13 @@
 }
 
 @include atTabletL {
-  .card-container {
-    &_type_identical {
+  .container {
+    &TypeIdentical {
       grid-template-columns: 1fr;
       grid-template-rows: 382px 290px;
     }
 
-    &_type_iframe {
+    &TypeIframe {
       grid-template-columns: 1fr;
       grid-template-rows: 433px 1fr;
     }
@@ -123,19 +120,49 @@
 }
 
 @include atMobile {
-  .card-container {
+  .container {
     grid-template-columns: minmax(290px, 450px);
 
-    &_type_identical {
+    &TypeIdentical {
       grid-template-columns: minmax(290px, 450px);
     }
 
-    &_type_iframe {
+    &TypeIframe {
       grid-template-columns: minmax(290px, 450px);
     }
 
-    &_type_personal-area {
+    &TypePersonalArea {
       grid-template-rows: 290px 1fr;
     }
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(290px, 1fr));
+  gap: 80px 30px;
+
+  &ContentSmallCards {
+    grid-template-columns: repeat(4, minmax(290px, 1fr));
+  }
+}
+
+@include atDesktop1440 {
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+}
+
+@include atDesktop1024 {
+  .cardsGrid {
+    padding-top: 50px;
+    row-gap: 30px;
+  }
+}
+
+@include atTablet {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
   }
 }

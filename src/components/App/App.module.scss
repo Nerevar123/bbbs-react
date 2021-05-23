@@ -9,6 +9,11 @@
   padding-bottom: 120px;
 }
 
+.mainSection {
+  padding-top: 30px;
+}
+
+
 @include atDesktop1440 {
   .pageSection {
     padding-left: 135px;
@@ -40,7 +45,6 @@
     padding-bottom: 50px;
   }
 }
-
 
 .sectionTitle {
   margin: 0;

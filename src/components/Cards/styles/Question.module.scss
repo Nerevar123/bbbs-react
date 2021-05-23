@@ -1,0 +1,169 @@
+@import '../../../sass/styles';
+
+.question {
+  margin-top: 30px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  padding: 50px 50px 47px;
+  background-color: #fff;
+  border-radius: 30px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.questionWrap {
+  margin-top: 10px;
+}
+
+.questionTitle {
+  cursor: pointer;
+}
+
+.questionRubric {
+  margin-top: 5px;
+  background-color: $background;
+}
+
+.questionAnswer {
+  display: none;
+
+  &Visible {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+.questionParagraph {
+  margin-top: 10px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.questionShowButton {
+  position: absolute;
+  top: 45px;
+  right: -100px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  background-color: $lightBlue;
+  cursor: pointer;
+  transition: .2s linear;
+
+  &Active {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: '';
+    position:absolute;
+    top: 38px;
+    left: 50%;
+    width: 1px;
+    height: 23px;
+    background-color: $black;
+    transform:translateX(-50%);
+  }
+  &::after {
+    content: '';
+    position:absolute;
+    top: 50%;
+    left: 38px;
+    width: 23px;
+    height: 1px;
+    background-color: $black;
+    transform:translateY(-50%);
+  }
+}
+
+@include atDesktop1024 {
+  .question {
+    margin-right: 0;
+    padding: 30px 15px 15px;
+  }
+
+  .questionWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .questionShowButton {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-self: flex-end;
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      top: 19px;
+      height: 12px;
+    }
+    &::after {
+      left: 19px;
+      width: 12px;
+    }
+  }
+
+  .questionAnswer {
+    &Visible {
+      margin-top: 10px;
+    }
+  }
+}
+
+.mainQuestionsItem {
+  margin: 30px 0 0;
+  align-items: flex-start;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.mainQuestionsTitle {
+  max-width: 770px;
+}
+
+.mainQuestionsRubric {
+  display: inline;
+  margin-top: 15px;
+}
+
+.mainQuestionsLink {
+  width: 100%;
+  text-decoration: none;
+}
+
+@include atDesktop1400 {
+  .mainQuestionsItem {
+    &:nth-last-of-type(-n+1) {
+      display: none;
+    }
+  }
+}
+
+@include atDesktop1024 {
+  .mainQuestionsItem {
+    padding-bottom: 30px;
+  }
+}
+
+@include atTabletL {
+  .mainQuestionsItem {
+    &:nth-last-of-type(-n+1) {
+      display: flex;
+    }
+  }
+}
+

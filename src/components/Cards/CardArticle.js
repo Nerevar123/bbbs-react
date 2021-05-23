@@ -16,9 +16,7 @@ function CardArticle(props) {
     >
       <a className={CardStyles.cardLinkWrap}>
         <h3 className={cn(CardStyles.cardQuote, CardStyles.chapterTitle)}>
-          Развитие детей-сирот отличается от развития детей, живущих в семьях.
-          Все этапы развития у детей-сирот проходят с искажениями и имеют ряд
-          негативных особенностей.
+          {props.content}
         </h3>
       </a>
       <a className={cn(CardStyles.link, CardStyles.cardLink)}>Читать статью</a>
@@ -29,6 +27,7 @@ function CardArticle(props) {
 CardArticle.propTypes = {
   isBlue: PropTypes.bool,
   isGreen: PropTypes.bool,
+  content: PropTypes.string,
 };
 
 export default CardArticle;
